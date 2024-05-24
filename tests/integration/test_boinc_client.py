@@ -271,6 +271,12 @@ def test_can_sequentially_set_global_overrides(boinc_test_client, project_weak_k
         ]
         == 10.0
     )
+    assert (
+        boinc_test_client.get_global_prefs_working()["global_preferences"][
+            "cpu_usage_limit"
+        ]
+        == 10.0
+    )
 
 
 @mark.authenticated
