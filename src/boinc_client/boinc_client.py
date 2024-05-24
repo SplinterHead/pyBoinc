@@ -2,6 +2,7 @@ from boinc_client.clients.rpc_client import RpcClient
 
 from .messages import get_all_notices, message_count, messages, public_notices
 from .modes import set_cpu_run_mode, set_gpu_run_mode, set_network_mode
+from .network import get_proxy_settings
 from .preferences import (
     get_global_prefs_file,
     get_global_prefs_override,
@@ -177,3 +178,6 @@ class Boinc:
 
     def set_network_mode(self, run_mode: str, duration: int = 0) -> dict:
         return set_network_mode(self.rpc_client, run_mode, duration)
+
+    def get_proxy_settings(self) -> dict:
+        return get_proxy_settings(self.rpc_client)

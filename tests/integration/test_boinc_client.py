@@ -280,7 +280,7 @@ def test_can_sequentially_set_global_overrides(boinc_test_client, project_weak_k
 
 
 @mark.authenticated
-def test_can_set_compute_modes(boinc_test_client, project_weak_key):
+def test_can_set_compute_modes(boinc_test_client):
     assert boinc_test_client.set_cpu_run_mode("always", 60) == {"success": True}
     assert boinc_test_client.set_gpu_run_mode("auto", 0) == {"success": True}
     assert boinc_test_client.set_network_mode("never") == {"success": True}

@@ -12,3 +12,5 @@ dist/
 # Test Reports
 .coverage
 cov/
+
+boinc_client.log

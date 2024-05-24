@@ -9,7 +9,7 @@ from boinc_client.models.global_preference_override import GlobalPreferenceOverr
 from boinc_client.models.global_preferences import GlobalPreferences
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(filename='boinc_client.log', encoding='utf-8', level=logging.DEBUG)
+logging.basicConfig(filename="boinc_client.log", encoding="utf-8", level=logging.DEBUG)
 
 
 def get_global_prefs_file(client: RpcClient) -> dict:
