@@ -149,6 +149,13 @@ def test_global_preferences(boinc_session_client):
     assert "error" in result  # No global_preferences file available
 
 
+@mark.integration
+def test_proxy_settings(boinc_session_client):
+    result = boinc_session_client.get_proxy_settings()
+    assert result
+    assert "proxy_info" in result
+
+
 @mark.authenticated
 def test_can_attach_and_detach_project(boinc_test_client, project_weak_key):
     assert (
