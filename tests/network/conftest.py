@@ -5,9 +5,9 @@ from pytest import fixture
 def proxy_settings_xml() -> str:
     return """<proxy_info>
         <socks_server_name>foo</socks_server_name>
-        <socks_server_port>foo</socks_server_port>
+        <socks_server_port>10</socks_server_port>
         <http_server_name>foo</http_server_name>
-        <http_server_port>foo</http_server_port>
+        <http_server_port>10</http_server_port>
         <socks5_user_name>foo</socks5_user_name>
         <socks5_user_passwd>foo</socks5_user_passwd>
         <socks5_remote_dns>foo</socks5_remote_dns>
@@ -23,9 +23,9 @@ def proxy_settings_dict() -> dict:
     return {
         "proxy_info": {
             "socks_server_name": "foo",
-            "socks_server_port": "foo",
+            "socks_server_port": 10,
             "http_server_name": "foo",
-            "http_server_port": "foo",
+            "http_server_port": 10,
             "socks5_user_name": "foo",
             "socks5_user_passwd": "foo",
             "socks5_remote_dns": "foo",
