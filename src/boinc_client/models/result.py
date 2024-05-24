@@ -22,6 +22,7 @@ class ActiveTask(Schema):
     swap_size = fields.Float()
     working_set_size = fields.Float()
     working_set_size_smoothed = fields.Float()
+    too_large = fields.Bool(required=False, missing=None)
 
 
 class Result(Schema):
@@ -43,6 +44,9 @@ class Result(Schema):
     state = fields.Int()
     version_num = fields.Int()
     wu_name = fields.Str()
+    report_immediately = fields.Bool(required=False, missing=None)
+    resources = fields.Str(required=False, missing=None)
+    suspended_via_gui = fields.Bool(required=False, missing=None)
 
     @pre_load
     def _set_ready(self, data, **kwargs):
